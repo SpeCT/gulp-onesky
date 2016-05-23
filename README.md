@@ -1,4 +1,4 @@
-# gulp-onesky [![Build Status](https://travis-ci.org/spect/gulp-onesky.svg?branch=master)](https://travis-ci.org/spect/gulp-onesky)
+# gulp-onesky [![Build Status](https://travis-ci.org/SpeCT/gulp-onesky.svg?branch=master)](https://travis-ci.org/SpeCT/gulp-onesky)
 
 > My classy gulp plugin
 
