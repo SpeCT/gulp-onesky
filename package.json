@@ -1,0 +1,45 @@
+{
+  "name": "gulp-onesky",
+  "version": "1.0.0",
+  "description": "Download OneSky Translations (multilangual)",
+  "homepage": "https://github.com/SpeCT/gulp-onesky#readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/spect/gulp-onesky.git"
+  },
+  "author": {
+    "name": "Iurii Proshchenko",
+    "email": "spect.man@gmail.com",
+    "url": "github.com/spect"
+  },
+  "bugs": {
+    "url": "https://github.com/SpeCT/gulp-onesky/issues"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "jshint index.js && jscs index.js"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "gulpplugin",
+    "onesky",
+    "oneskyapp",
+    "i18n",
+    "translations"
+  ],
+  "dependencies": {
+    "gulp-util": "^3.0.7",
+    "request": "^2.72.0",
+    "through": "^2.3.8"
+  },
+  "devDependencies": {
+    "jscs": "^3.0.3",
+    "jshint": "^2.9.2"
+  }
+}
