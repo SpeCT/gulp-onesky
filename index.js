@@ -33,18 +33,20 @@ module.exports = function (opts) {
       return;
     }
 
-    if (opts.locales)
-      Object.keys(body).forEach(function(lang) {
+    if (opts.locales) {
+      Object.keys(body).forEach(function (lang) {
         stream.queue(new gutil.File({
           path: path.join(opts.outputDir, lang.split('-')[0], 'messages.json'),
           contents: new Buffer(JSON.stringify(body[lang], null, 2))
         }));
       });
-    else
+    } else {
       stream.queue(new gutil.File({
         path: opts.outputFile,
         contents: new Buffer(JSON.stringify(body, null, 2))
       }));
+    }
+
     stream.emit('end');
   });
 
@@ -74,6 +76,7 @@ function getMultilangual(opts, cb) {
         body = body.meta.data;
       }
     }
+
     cb(err, body);
   });
 }
