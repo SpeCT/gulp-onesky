@@ -11,7 +11,7 @@ $ npm install --save-dev gulp-onesky
 
 
 ## Usage
-
+### Multilingual file
 ```js
 var gulp = require('gulp');
 var onesky = require('gulp-onesky');
@@ -22,10 +22,9 @@ gulp.task('i18n:multilangual-json', () => {
     secretKey: '<onesky account secret key>',
     projectId: '<your project id>',
     sourceFile: '<onesky source filename>'
-  }))
-  .pipe(gulp.dest('src'))
-);
-
+  })
+  .pipe(gulp.dest('src'));
+});
 
 gulp.task('i18n:web-extension-locales', () => {
   onesky.locales({
@@ -33,9 +32,27 @@ gulp.task('i18n:web-extension-locales', () => {
     secretKey: '<onesky account secret key>',
     projectId: '<your project id>',
     sourceFile: '<onesky source filename>'
-  }))
-  .pipe(gulp.dest('src'))
-);
+  })
+  .pipe(gulp.dest('src'));
+});
+```
+
+### Specified Locale file
+```js
+var gulp = require('gulp');
+var onesky = require('gulp-onesky');
+
+gulp.task('i18n:locale-json', () => {
+  onesky({
+    publicKey: '<onesky account public key>',
+    secretKey: '<onesky account secret key>',
+    projectId: '<your project id>',
+    sourceFile: '<onesky source filename>',
+    action: 'LOCALE_FILE',
+    locale: 'en'
+  })
+  .pipe(gulp.dest('src'));
+});
 ```
 
 
